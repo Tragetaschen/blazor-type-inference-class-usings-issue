@@ -1,0 +1,10 @@
+﻿@typeparam T where T : MyModel
+
+@code
+{
+    [Parameter]
+    public RenderFragment<T> R { get; set; }
+
+    [Parameter]
+    public IService<T> Service { get; set; }
+}

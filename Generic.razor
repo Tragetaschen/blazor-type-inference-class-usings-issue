@@ -1,10 +1,11 @@
-﻿@typeparam T where T : MyModel
+﻿@typeparam T1 where T1 : MyModel
+@typeparam T2 where T2 : class
 
 @code
 {
     [Parameter]
-    public RenderFragment<T> R { get; set; }
+    public RenderFragment<T1> R { get; set; }
 
     [Parameter]
-    public IService<T> Service { get; set; }
+    public IService<T1, T2> Service { get; set; }
 }
